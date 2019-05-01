@@ -11,6 +11,7 @@ Backdrop.behaviors.views_accordion = {
           var usegroupheader = this.usegroupheader;
           var viewname = this.viewname;
           var display = this.display;
+          var rowids = this.rowids;
 
           /* Our panel heightStyle setting */
           var heightStyle = (this.autoheight == 1) ? 'auto' : (this.fillspace == 1 ? 'fill' : 'content');
@@ -26,7 +27,7 @@ Backdrop.behaviors.views_accordion = {
           /* Prepare our markup for jquery ui accordion */
           $(displaySelector + ' ' + headerSelector + ':not(.ui-accordion-header)').each(function(i){
             // Hash to use for accordion navigation option.
-            var hash = "#" + viewname + "-" + display + "-" + i;
+            var hash = "#" + viewname + "-" + display + "-" + rowids[i];
             var $this = $(this);
             var $link = $this.find('a');
             // if the header is not already using an anchor tag, add one
