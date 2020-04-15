@@ -18,7 +18,6 @@
   
             /* the selectors we have to play with */
             var displaySelector = '.view-id-' + viewname + '.view-display-id-' + display + ' > .view-content';
-            console.log(displaySelector);
             var headerSelector = this.header;
   
             /* The row count to be used if Row to display opened on start is set to random */
